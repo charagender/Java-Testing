@@ -40,7 +40,6 @@ public class Exercise2b {
                 Board = makeMove(Board, 1, false);
                 Board = makeMove(Board, 2, false);
                 printBoard(Board);
-                is
             }
 
         }

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -211,5 +213,50 @@ public class Main {
             }
         } */
 
+
+        // Classes and Objects!
+
+/*        Using the default constructor
+        Dog doggo = new Dog();
+        System.out.println(doggo.name);*/
+
+        Dog bengie = new Dog("bengie.png", "Bengie", 7);
+        System.out.println(bengie.name);
+        System.out.println(bengie.getAge());
+
+        Dog gracie = new Dog("gracie.png", "Gracie", 5);
+        System.out.println(gracie.name);
+        System.out.println(gracie.getAge());
+
+        bengie.makeSound();
+        gracie.makeSound();
+
+        System.out.println(bengie.getAgeInHumanYears());
+
+        bengie.Birthday();
+
+        Cat whiskers = new Cat("whiskers.png", "Whiskers", 4);
+        whiskers.makeSound();
+
+        List<Animal> animals = new ArrayList<>();
+        animals.add(bengie);
+        animals.add(gracie);
+        animals.add(whiskers);
+
+        animals.get(1).makeSound();
+
+        Animal animal = new Dog("jenny.png", "Jenny", 12);
+        animal.makeSound();
+
+
+        List<IPettable> pets = new ArrayList<>();
+        pets.add(bengie);
+        pets.add(gracie);
+        pets.add(whiskers);
+        pets.add(new Bird("yoshi.png", "Yoshi", 12));
+
+        for(IPettable pet : pets) {
+            pet.pet();
+        }
     }
 }
