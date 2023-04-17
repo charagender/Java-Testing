@@ -49,7 +49,7 @@ public class Exercise2a {
             scorePrint(score);
 
             System.out.println("Do you wish to play again?");
-            if(scanner.next().toLowerCase().equals("no")) {
+            if(scanner.next().equalsIgnoreCase("no")) {
                 System.out.println("Thank you for playing");
                 break;
             }
@@ -57,20 +57,19 @@ public class Exercise2a {
     }
 
     public static void scorePrint(int score) {
-        switch(score) {
-            case 5: System.out.println("You are a genius! Everything correct!"); break;
-            case 4: System.out.println("You are pretty smart. Only one mistake!"); break;
-            case 3: System.out.println("You are okay. Made two mistakes. It can happen to anyone!"); break;
-            case 2: System.out.println("You made three mistakes. That's okay, just keep studying!"); break;
-            case 1: System.out.println("You made four mistakes. You can improve if you study hard enough!"); break;
-            case 0: System.out.println("You... you got everything wrong!"); break;
-            default: System.out.println("what"); break;
+        switch (score) {
+            case 5 -> System.out.println("You are a genius! Everything correct!");
+            case 4 -> System.out.println("You are pretty smart. Only one mistake!");
+            case 3 -> System.out.println("You are okay. Made two mistakes. It can happen to anyone!");
+            case 2 -> System.out.println("You made three mistakes. That's okay, just keep studying!");
+            case 1 -> System.out.println("You made four mistakes. You can improve if you study hard enough!");
+            case 0 -> System.out.println("You... you got everything wrong!");
+            default -> System.out.println("what");
         }
     }
 
     public static int questionCheck(String questionAnswer, String questionInput, int score) {
-        if(questionInput.toLowerCase()
-                .equals(questionAnswer.toLowerCase())) {
+        if(questionInput.equalsIgnoreCase(questionAnswer)) {
             score++;
             System.out.println("Correct! Your score is now " + score);
         } else {
